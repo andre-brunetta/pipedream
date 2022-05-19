@@ -18,7 +18,7 @@ export default defineComponent({
     data: { type: "data_store" }
   },
   async run({ steps, $ }) {
-    // Now we can access the data store at "this.store"
+    // Now we can access the data store at "this.data"
     await this.data.get("email");
   }
 });
@@ -27,7 +27,7 @@ export default defineComponent({
 :::tip
 `props` injects variables under `this` scope in components.
 
-In the above example we essentially instructed that this step needs the data store injected into the `this.store` prop. 
+In the above example we essentially instructed that this step needs the data store injected into the `this.data` prop. 
 :::
 
 ## Using the data store
